@@ -1,0 +1,256 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.cdnfonts.com/css/cascadia-code');
+
+/*<------------------ VARIABLES CSS ------------------>*/
+:root{
+    --body-clr :  rgb(19, 18, 18);
+    --first-clr :  rgb(64, 210, 255);
+    --second-clr :  rgb(65, 52, 247);
+    --third-clr :  rgb(19, 18, 18);
+    --text-nav-shadow : rgb(68, 0, 255);
+    --logo-shadow : #16efff;
+
+
+    --body-fnt :  'Cascadia Code', sans-serif;
+}
+
+
+/* MAIN CONTENT  */
+/*Le damos un margen de 5px, 0 de padding y
+ asignamos la fuente a todo el contenido*/
+* {
+    margin: 0;
+    font-family: var(--body-fnt);
+}
+
+/* HTML BEHAVIOUR */
+html{
+    scroll-behavior: smooth;
+}
+
+/*<------------- BODY CONTENT -------------->*/
+
+/*<------------- CLASES CSS -------------->*/
+
+
+/*<------------- CLASES REUTILIZABLES (CLASES QUE PUEDEN TENER VARIOS ELEMENTOS) -------------->*/
+.container{
+    max-width: 95wh;
+    margin-inline : auto;
+    padding-inline: .75rem;
+}
+
+
+
+/*<------------- CLASES DE NAVEGACIÓN Y HEADER -------------->*/
+/*Nav*/
+.nav {
+
+    display:flex;
+    justify-content: right;
+    font-weight: 700;
+    align-items: center;
+    
+
+
+}
+/*Nav logo*/
+.nav-logo{
+    color: #ffffff;
+    width: 10vw;
+    margin-right: auto;
+    margin-left: 5%;
+    font-size: 40px;
+    display: block;
+
+}
+
+.nav-logo:hover{
+    color : var(#16efff);
+
+}
+
+.o{
+    color: #16efff;
+    padding: 0;
+    text-shadow:
+      0 0 2px #16efff,
+      0 0 6px #16efff;
+
+    display: inline; /* Mantén inline */
+
+}
+
+
+
+/*Nav menu*/
+.nav-menu{
+    display:flex;
+    column-gap: 20px;
+    align-items: center;
+    gap: 15vw;
+    
+}
+.nav-menu ul{
+    list-style: none;
+    margin-top: 10px;
+    
+}
+
+/*Nav list*/
+
+.nav-list{
+    font-size: 16px;
+    align-items: left;
+    display: flex;
+    gap: 50px; /* Espaciado entre los ítems */
+    margin-right: 8vw;
+}
+.nav-list li a {
+    text-decoration: none; /* Sin subrayado */
+    color: #ffffff; /* Color del texto */
+    font-weight:bold; /* Negrita */
+
+}
+.nav-list a:hover{
+    color: var(--logo-shadow);
+
+}
+
+
+.nav-list-icons{
+    justify-content: right;
+    display: flex;
+    margin-right: 50px; 
+    gap: 20px;
+
+}
+
+
+.nav-buttons{
+
+    margin-right: 30px;
+}
+.nav-talk-button{
+    
+    padding: 15px 15px;
+    border-radius: 15px;
+    border: 1px solid;
+    border-color: #ffffff;
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.nav-talk-button a{
+    color: #16efff;
+}
+
+.nav-talk-button:hover{
+    transform:scale(1.1);
+    text-shadow: 
+    0 0 20px #16efff;
+}
+
+
+/*Header*/
+
+
+.nav{
+
+    height: 10vh;
+    border-bottom: 1px solid;
+    border-color: #ffffff;
+}
+
+.nav-item:hover{
+    transform: scale(1.1);
+}
+
+
+.header-main-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 89vh;
+    width: 100vw;
+}
+
+.title-container{
+    width: 40vw;
+    display: block;
+}
+
+.first-title{
+    color: #838383;
+    font-weight: bold;
+    padding-bottom: 15px;   
+}
+
+.mainTitle{
+    display: flex vertical;
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: bold;
+
+}
+
+.HTML-item{
+    color: #da5b29;
+}
+.CSS-item{
+    color: #168eff;
+}
+.JS-item{
+    color: #deff20;
+}
+
+.GAME-item{
+    color: #07ff28;
+}
+
+.rodrigo-img-container{
+    width: 40vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;    /* Centra verticalmente */
+}
+.rodrigo-img{
+    
+    width: 500px;            /* Ajusta el tamaño deseado */
+    height: 500px; 
+    border-radius: 300px;
+    object-fit: cover;
+    opacity: 0.7;
+    transition: transform 0.3s ease;
+    border: 3px solid;
+    border-color: #16efff;
+    transform-origin: center;
+}
+
+.rodrigo-img:hover{
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+
+/*<------------- ETIQUETAS CSS -------------->*/
+
+
+
+a{
+    /*Con esto indicamos que no queremos que se decore el link*/
+    text-decoration: none;
+}
+
+img{
+
+    max-width: 100%;
+
+}
+
+header{
+    background-color: var(--body-clr);
+    height: 100vh;
+    width: 100vw;
+}

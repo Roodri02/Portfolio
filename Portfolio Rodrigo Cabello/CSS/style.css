@@ -1,0 +1,470 @@
+/* <------------ FONTS IMPORTS ------------> */
+/* GOOGLE FONTS */
+@import url('https://fonts.cdnfonts.com/css/cascadia-code');
+
+
+/* <------------ VARIABLES CSS ------------> */
+:root{
+
+    /*Background colors*/
+    --background-color : #1c1c22;
+    --background-color2 : rgb(56, 56, 56);
+    --background-color3 : #33ffb1;
+    --background-color4 : rgb(107, 107, 107);
+
+    /*Fonts*/
+    --cascadia-font : 'Cascadia Code', sans-serif;
+
+    /*Title colors*/
+    --title-color1 : rgb(224, 224, 224);
+    --title-color2 : rgb(224, 224, 224);
+    --title-color3 : rgb(224, 224, 224);
+    --title-color4 : rgb(224, 224, 224);
+    --title-color5 : rgb(224, 224, 224);
+
+    /*Nav links colors*/
+    --link-color1 : rgb(255, 253, 253);
+    --link-color2 : rgb(224, 224, 224);
+    --link-color3 : rgb(224, 224, 224);
+    --link-color4 : rgb(224, 224, 224);
+
+}
+
+
+/* <------------- ALL CSS --------------> */
+*{
+
+    /* Le damos un margen de 0 a toda la página web
+     para que no haya bordes blancos en ningun borde*/
+    margin: 0;
+
+
+    /* Voy a cambiar la fuente en todo el documento*/
+    font-family: var(--cascadia-font);
+    
+}
+
+/* <------------- CLASES CSS -----------> */
+
+/* HEADER CSS */
+
+.header{
+
+    display: flex;
+    flex-direction: column; /* Apilar elementos de forma vertical */
+
+    /*Le vamos a dar un tamaño del 100% de la ventana*/
+    width: 100vw;
+    height: 100vh;
+
+
+    /* Cambiamo el color de fondo de todo el header */
+    background-color: var(--background-color);
+}
+
+/* NAV DEL HEADER*/
+.nav-container{
+
+    /* Le voy a dar una distribución horizontal, para tener separados 
+    cada container del navegador */
+    display: flex;
+
+
+    /*Le vamos a dar una anchura del 100% de la ventana*/
+    width: 100vw;
+    /*Le vamos a dar una altura del 10% de la ventana*/
+    height: 10%;
+
+
+
+    top: 0; /* Fijo en la parte superior de la ventana */
+    left: 0;
+    z-index: 100; /* Aseguramos que esté encima de otros elementos */
+
+}
+
+/*NAV-LOGO-CONTAINER*/
+.nav-logo-container{
+    width: 70vw;
+    height: 100%;
+
+    /*Centramos el texto del logo*/
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;  
+
+}
+
+.logo, .logo-doc{
+
+    font-size: 35px;
+    font-weight: normal;
+
+    text-align: center;
+
+
+    /*Cambiamos el color del titulo del logo    */
+    color: var(--title-color1);
+
+}
+
+.logo-doc{
+    color: var(--background-color3);
+    font-weight: bold;
+}
+
+
+
+/*NAV-LINKS-CONTAINER*/
+.nav-links-container{
+    width: 55vw;
+    height: 100%;
+
+    display: flex;
+
+    /*Centramos los elementos que contiene*/
+    justify-items: center;
+    align-content: center;
+
+
+
+    
+}
+
+.links-list{
+
+
+    margin-top: 10px;
+
+    /*Separamos todos los elementos de la lista de manera horizontal*/
+    display: flex;
+    width: 80%;
+    height: 100%;
+    /*Separamos cada elementos de la lista con un margen de por medio*/
+    gap: 20px;
+
+    padding: 0;
+
+
+    justify-content: right; 
+    align-items: center;
+
+}
+
+
+.link-list-item{
+    display: block; /* Asegura que el enlace sea un bloque */
+    width: auto;
+
+
+    margin:10px;
+}
+
+.link-list-item-a{
+    display: block; /* Asegura que el enlace sea un bloque */
+    text-align: center;
+
+    /*Le ponemos un pading a cada link para que se aleje el borde al clickarlo*/
+    padding-bottom: 5px;
+
+    font-size: 18px;
+    color: var(--link-color1);
+
+}
+
+.link-list-item-a:hover{
+    color: var(--background-color3);
+    transform: scale(1.1);
+
+}
+
+
+.active-link{
+
+    color: var(--background-color3);
+    border-bottom: 1px solid;
+}
+
+
+
+/*NAV-BUTTON-CONTAINER*/
+.nav-button-container{
+    width: 30vw;
+    height: 100%;
+
+    
+}
+
+
+.hire-me-container{
+
+    font-size: 18px;
+    width: 30%;
+    align-content: center;
+    text-align: center;
+
+    margin-top: 10px;
+
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.hire-me-button{
+    
+    padding: 10px 25px;
+    border-radius: 30px;
+    color: rgb(41, 41, 41);
+    background-color: var(--background-color3);
+}
+
+.hire-me-container:hover{
+
+    transform: scale(1.1);
+    opacity: 0.8;
+
+}
+
+/*Header container*/
+
+.header-container{
+
+    display: flex;
+    width: 100vw;
+    height: 90vh; /* Resta el 10% del nav-container */
+    justify-content: space-between;
+    align-content: center;
+
+
+}
+
+
+.info-container{
+
+    width: 50vw;
+    align-content: center;
+    margin : 0 0 0 350px;
+    flex-direction: column;
+
+
+}
+
+.software-container{
+
+    font-size: 18px;
+    color: var(--title-color1);
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.name-container{
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+.name-init-container{
+    color: var(--title-color1);
+}
+
+.name-title-container{
+    color: var(--background-color3);
+    text-shadow: 
+       0 0 30px #33ffb1 ,
+        0 0 50px #33ffb1 ;
+}
+
+
+.resume-container{
+
+    width: 90%;
+
+    font-size: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 30px;
+
+    color: var(--title-color1);
+}
+
+.haeder-links{
+    display: flex;
+}
+
+
+.curriculum-container{
+
+    width: 200px;
+    border: 1px solid;
+    border-color: var(--background-color3);
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 200px;
+
+    transform-origin:center ;
+    transition: transform 0.3s ease;
+
+}
+
+.currilum-download-container-button a{
+
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+}
+
+.curriculum-link-container{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 8px;
+    display: flex;
+
+    gap: 10px;
+
+    color: var(--background-color3);
+}
+
+.curriculum-container:hover{
+
+    transform: scale(1.05);
+    box-shadow: 0 0 10px,
+    0 0 40px #33ffb1 ;
+    text-shadow: 0 0 10px,
+      0 0 40px #33ffb1 ,
+       0 0 50px #33ffb1 ,
+        0 0 60px #33ffb1 ;
+
+}
+
+.img-container{
+
+    width: 50vw;
+    align-content: center;
+    text-align: center;
+}
+
+.tarjeta{
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+    box-shadow: 16px 14px  20px #000000;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+   
+
+
+}
+
+.tarjeta::before{
+    content: "";
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    background-image: conic-gradient(#33ffb1 20deg, transparent 120deg);
+
+    animation : rotar 5s linear infinite;
+}
+
+.tarjeta img{
+    width: 490px;
+    height: 490px;
+    border-radius: 50%;
+    
+}
+
+@keyframes rotar{
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+.tarjeta::after{
+
+    content: "";
+    position: absolute;
+    height: 490px;
+    width: 490px;
+    border-radius: 50%;
+    background-color: var(--background-color);
+    background-image: linear-gradient(rgb(0,0,0,0),rgb(0,0,0,0)),url(../ASSETS/IMAGES/fotoMia.jpeg);
+    background-size: cover;
+    background-position: 90%;
+
+    box-shadow: 
+    0,0,20px  #33ffb1,
+    0,0,50px  #33ffb1,
+    0,0,70px  #33ffb1;
+    
+}
+
+
+.header-links{
+
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+}
+
+.social-media-container{
+
+    display: flex;
+    padding: 5px;
+    margin-top: 10px;
+    gap: 30px;
+    
+    
+}
+
+.social-link-container{
+
+
+    border: 1px solid;
+    border-color: var(--background-color3);
+    padding:8px  10px;
+
+    border-radius: 50%;
+
+}
+
+.social-link-container:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px,
+    0 0 40px #33ffb1 ;
+    text-shadow: 0 0 10px,
+      0 0 30px #33ffb1 ,
+       0 0 40px #33ffb1 ,
+        0 0 50px #33ffb1 ;
+}
+
+
+/* <---------------- ETIQUETAS CSS ---------------->  */
+
+
+a{
+    /*Quitamos el subrayado de todas las etiquetas a del documento*/
+    text-decoration: none;
+}
+
+ul{
+
+    /*Hacemos que ninguna lista de la página web tenga los puntos*/
+    list-style: none;
+
+}
+
+

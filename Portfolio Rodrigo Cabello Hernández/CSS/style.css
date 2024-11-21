@@ -24,8 +24,9 @@
 }
 
 /* HTML BEHAVIOUR */
-html{
-    scroll-behavior: smooth;
+*,html{
+    scroll-behavior: smooth !important;
+    scroll-padding-top: 10vh; /* Ajusta según la altura de tu header */
 }
 
 /*<------------- BODY CONTENT -------------->*/
@@ -50,7 +51,10 @@ html{
     justify-content: right;
     font-weight: 700;
     align-items: center;
-    
+    width: 100vw;
+    position: fixed;
+    background-color: var(--body-clr);
+    z-index: 1000;
 
 
 }
@@ -129,7 +133,7 @@ html{
 
 .nav-buttons{
 
-    margin-right: 30px;
+    margin-right: 50px;
 }
 .nav-talk-button{
     
@@ -233,6 +237,23 @@ html{
     transform: scale(1.2);
 }
 
+/*<------------- ABOUT ME CSS -------------->*/
+.about-me-container{
+
+    width: 100vw;
+    height: 100vh;
+
+    background: linear-gradient(var(--body-clr),rgb(34, 34, 34),var(--body-clr));
+}
+.about-me-container h1{
+
+    text-align: center;
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 50px;
+    padding: 5vh;
+
+}
 
 /*<------------- ETIQUETAS CSS -------------->*/
 

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+
+
+    <header class="header">
+        
+        <!-- El navegador principal de la página web-->
+        <div class="nav-container">
+
+            <!-- El container principal del logo del navegador -->
+            <div class="nav-logo-container">
+                <span class="logo">Rodrigo</span><span class="logo-doc">.</span>
+            </div>
+
+            <!-- El container principal de los links del navegador-->
+            <div class="nav-links-container">
+                
+                <ul class="links-list">
+
+                    <li class="link-list-item">
+
+                        <a href="#" class="link-list-item-a active-link">
+                            Home
+                        </a>
+
+                    </li>
+
+                    
+                    <li class="link-list-item">
+
+                        <a href="#section2" class="link-list-item-a">
+                            Services
+                        </a>
+
+                    </li>
+
+                    
+                    <li class="link-list-item">
+
+                        <a href="#section3" class="link-list-item-a">
+                            Resume
+                        </a>
+
+                    </li>
+
+                    
+                    <li class="link-list-item">
+
+                        <a href="#section1" class="link-list-item-a">
+                            Work    
+                        </a>
+
+                    </li>
+
+                    
+                    <li class="link-list-item">
+
+                        <a href="#section2" class="link-list-item-a">
+                            Contact
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+                <div class="hire-me-container">
+                    
+                    <a href="#section3" class="hire-me-button">
+                        Hire me
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+            <!-- El container principal del boton de contacto-->
+            <div class="nav-button-container">
+
+
+
+
+            </div>
+
+
+        </div>
+
+        <div class="header-container">
+
+            <div class="info-container"> 
+
+                <!-- Ahora aqui necesito 4 containers verticales-->
+
+                <div class="software-container">
+                    Software Developer
+                </div>
+
+                <div class="name-container">
+                    <h1 class="name-init-container">
+                        Hello I'm
+                    </h1>
+
+                    <h1 class="name-title-container">
+                        Rodrigo Cabello
+                    </h1>
+                </div>
+
+                <div class="resume-container">
+                    <p> I excel at crafting elegant digital experiences and 
+                        I am proficient in various programming languages and
+                        technologies.
+                    </p>
+                </div>
+
+                <div class="header-links">
+
+                    <div class="curriculum-container">
+
+                        <a href="" class="curriculum-link-container">
+                            <div class="currilum-download-container-button">
+                                DOWNLOAD CV
+                            </div>
+    
+                            <div class="currilum-download-container-logo">
+                                <img src="./ASSETS/IMAGES/download-icon.png" alt="">
+                            </div>
+                        </a>
+
+
+                    </div>
+
+                    <div class="social-media-container">
+
+                        <a href="" class="social-link-container">
+                            <img src="./ASSETS/IMAGES/instagram-icon.png" alt="">
+                        </a>
+                        <a href="" class="social-link-container">
+                            <img src="./ASSETS/IMAGES/github-icon.png" alt="">
+                        </a>
+                        <a href="" class="social-link-container">
+                            <img src="./ASSETS/IMAGES/linkedin-icon.png" alt="">
+                        </a>
+                        <a href="" class="social-link-container">
+                            <img src="./ASSETS/IMAGES/youtube-icon.png" alt="">
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="img-container"> 
+
+                <div class="tarjeta">
+                    <img src="./ASSETS/IMAGES/fotoMia.jpeg" alt="">
+                </div>
+                
+            </div>
+
+
+
+        </div>
+
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // Obtener todos los elementos del menú
+        const navItems = document.querySelectorAll('.link-list-item-a');
+
+        // Función para quitar la clase 'active' de todos los elementos del menú
+        function removeActiveClass() {
+            navItems.forEach(item => item.classList.remove('active-link'));
+        }
+
+        // Detectar clics en los enlaces para cambiar el estado activo
+        navItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                removeActiveClass(); // Elimina 'active' de todos los enlaces
+                item.classList.add('active-link'); // Marca como 'active' el enlace clicado
+
+            });
+        });
+
+        // (Opcional) Si quieres inicializar con un enlace activo basado en la URL actual
+        window.addEventListener('load', () => {
+            const initialSection = window.location.hash.replace('#', '');
+            if (initialSection) {
+                const initialLink = document.querySelector(`a[href="#${initialSection}"]`);
+                if (initialLink) {
+                    removeActiveClass();
+                    initialLink.classList.add('active-link');
+                }
+            }
+        });
+    </script>
+    
+</body>
+</html>

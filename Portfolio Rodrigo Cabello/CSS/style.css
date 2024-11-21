@@ -73,7 +73,7 @@
     /*Le vamos a dar una anchura del 100% de la ventana*/
     width: 100vw;
     /*Le vamos a dar una altura del 10% de la ventana*/
-    height: 10%;
+    height: 10vh;
 
 
 
@@ -226,11 +226,19 @@
 
 /*Header container*/
 
+
 .header-container{
+
+    width: 100vw;
+    height: 90vh; /* Resta el 10% del nav-container */
+
+}
+
+.header-info-container{
 
     display: flex;
     width: 100vw;
-    height: 90vh; /* Resta el 10% del nav-container */
+    height: 75%; /* Resta el 10% del nav-container */
     justify-content: space-between;
     align-content: center;
 
@@ -427,6 +435,7 @@
     margin-top: 10px;
     gap: 30px;
     
+    align-items: center;
     
 }
 
@@ -435,11 +444,13 @@
 
     border: 1px solid;
     border-color: var(--background-color3);
-    padding:8px  10px;
-
+    padding:10px  10px;
     border-radius: 50%;
+    width: 24px;
+    height: 24px;
 
 }
+
 
 .social-link-container:hover{
     transform: scale(1.05);
@@ -449,6 +460,63 @@
       0 0 30px #33ffb1 ,
        0 0 40px #33ffb1 ,
         0 0 50px #33ffb1 ;
+}
+
+.social-link-container img{
+    width: 24px;
+    height: 24px;
+}
+
+
+.programmer-info-container{
+
+    display: flex;
+
+    width: 100vw;
+    height: 20%;
+
+    margin : 0 0 0 350px;
+
+    justify-content: left;
+    gap :50px;
+
+}
+
+.programmer-info-item-container{
+
+    width: 15%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    color: var(--title-color1);
+    gap: 20px;
+    line-height: 25px;
+
+}
+
+.info-divisor {
+    width: 100vw;
+    height: 5%;
+}
+
+
+
+
+.programmer-title{
+
+    color: var(--title-color1);
+
+    text-align: center;
+    font-size: 80px;
+
+}
+
+.programmer-info-title-container p{
+
+    margin-top: 20px;
+
 }
 
 

@@ -95,80 +95,138 @@
         </div>
 
         <div class="header-container">
+            <div class="header-info-container">
+                <div class="info-container"> 
 
-            <div class="info-container"> 
-
-                <!-- Ahora aqui necesito 4 containers verticales-->
-
-                <div class="software-container">
-                    Software Developer
-                </div>
-
-                <div class="name-container">
-                    <h1 class="name-init-container">
-                        Hello I'm
-                    </h1>
-
-                    <h1 class="name-title-container">
-                        Rodrigo Cabello
-                    </h1>
-                </div>
-
-                <div class="resume-container">
-                    <p> I excel at crafting elegant digital experiences and 
-                        I am proficient in various programming languages and
-                        technologies.
-                    </p>
-                </div>
-
-                <div class="header-links">
-
-                    <div class="curriculum-container">
-
-                        <a href="" class="curriculum-link-container">
-                            <div class="currilum-download-container-button">
-                                DOWNLOAD CV
-                            </div>
+                    <!-- Ahora aqui necesito 4 containers verticales-->
     
-                            <div class="currilum-download-container-logo">
-                                <img src="./ASSETS/IMAGES/download-icon.png" alt="">
-                            </div>
-                        </a>
+                    <div class="software-container">
+                        Software Developer
+                    </div>
+    
+                    <div class="name-container">
+                        <h1 class="name-init-container">
+                            Hello I'm
+                        </h1>
+    
+                        <h1 class="name-title-container">
+                            Rodrigo Cabello
+                        </h1>
+                    </div>
+    
+                    <div class="resume-container">
+                        <p> I excel at crafting elegant digital experiences and 
+                            I am proficient in various programming languages and
+                            technologies.
+                        </p>
+                    </div>
+    
+                    <div class="header-links">
+    
+                        <div class="curriculum-container">
+    
+                            <a href="" class="curriculum-link-container">
+                                <div class="currilum-download-container-button">
+                                    DOWNLOAD CV
+                                </div>
+        
+                                <div class="currilum-download-container-logo">
+                                    <img src="./ASSETS/IMAGES/download-icon.png" alt="">
+                                </div>
+                            </a>
+    
+    
+                        </div>
+    
+                        <div class="social-media-container">
+    
+                            <a href="" class="social-link-container">
+                                <img src="./ASSETS/IMAGES/instagram-icon.png" alt="">
+                            </a>
+                            <a href="" class="social-link-container">
+                                <img src="./ASSETS/IMAGES/github-icon.png" alt="">
+                            </a>
+                            <a href="" class="social-link-container">
+                                <img src="./ASSETS/IMAGES/linkedin-icon.png" alt="">
+                            </a>
+                            <a href="" class="social-link-container">
+                                <img src="./ASSETS/IMAGES/youtube-icon.png" alt="">
+                            </a>
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
+                <div class="img-container"> 
+    
+                    <div class="tarjeta">
+                        <img src="./ASSETS/IMAGES/fotoMia.jpeg" alt="">
+                    </div>
+                    
+                </div>
+            </div>
 
+            <div class="programmer-info-container">
 
+                <div class="programmer-info-item-container">
+
+                    <div class="programmer-info-title-container">
+                        <h2 class="programmer-title" id="experience-title">
+                            12
+                        </h2>
                     </div>
 
-                    <div class="social-media-container">
-
-                        <a href="" class="social-link-container">
-                            <img src="./ASSETS/IMAGES/instagram-icon.png" alt="">
-                        </a>
-                        <a href="" class="social-link-container">
-                            <img src="./ASSETS/IMAGES/github-icon.png" alt="">
-                        </a>
-                        <a href="" class="social-link-container">
-                            <img src="./ASSETS/IMAGES/linkedin-icon.png" alt="">
-                        </a>
-                        <a href="" class="social-link-container">
-                            <img src="./ASSETS/IMAGES/youtube-icon.png" alt="">
-                        </a>
+                    <div class="programmer-info-title-container">
+                        <p>Years of experience</p>
                     </div>
+
 
                 </div>
+                <div class="programmer-info-item-container">
+                    <div class="programmer-info-title-container">
+                        <h2 class="programmer-title" id="projects-title">
+                            43
+                        </h2>
+                    </div>
+
+                    <div class="programmer-info-title-container">
+                        <p>Projects <br>completed</p>
+                    </div>
+                </div>
+                <div class="programmer-info-item-container">
+                    <div class="programmer-info-title-container">
+                        <h2 class="programmer-title" id="skills-title">
+                            16
+                        </h2>
+                    </div>
+
+                    <div class="programmer-info-title-container">
+                        <p>Technologies mastered</p>
+                    </div>
+                </div>
+                <div class="programmer-info-item-container">
+                    <div class="programmer-info-title-container">
+                        <h2 class="programmer-title" id="programmer-title">
+                            1
+                        </h2>
+                    </div>
+
+                    <div class="programmer-info-title-container">
+                        <p>Code <br> Commits</p>
+                    </div>
+                </div>
+
 
             </div>
 
-            <div class="img-container"> 
-
-                <div class="tarjeta">
-                    <img src="./ASSETS/IMAGES/fotoMia.jpeg" alt="">
-                </div>
-                
+            <div class="info-divisor">
+                <!-- Este solo sirve para dividir la informacion-->
             </div>
-
-
-
         </div>
+
+
+
 
     </header>
 
@@ -221,6 +279,65 @@
             }
         });
     </script>
-    
+
+
+
+
+
+
+
+    <!-- Script que anima el contador de commits-->
+
+    <script>
+        // Definir el valor máximo de la animación
+        const maxNumber = 286;
+        const maxYearsExperience = 5;
+        const maxSkills = 17;
+        const maxProjects = 43;
+        const counterElement = document.getElementById('programmer-title');
+        const experienceElement = document.getElementById('experience-title');
+        const skillElement = document.getElementById('skills-title');
+        const ProjectsElement = document.getElementById('projects-title');
+
+        // Función para animar el contador
+        function animateCounter() {
+            let currentNumber = 1; // Empezamos desde 1
+            const duration = 4000; // Duración total de la animación (en milisegundos)
+            const increment = maxNumber / duration * 60; // Calcula cuánto debe aumentar el número cada 50ms
+
+            // Establece la animación usando setInterval
+            const interval = setInterval(() => {
+                currentNumber += increment;
+                if (currentNumber >= maxNumber) {
+                    currentNumber = maxNumber; // Asegura que el contador no pase de 246
+                    counterElement.textContent = Math.round(currentNumber);
+                    clearInterval(interval); // Detiene la animación cuando llega al máximo
+                }
+
+                if(currentNumber<maxYearsExperience){
+
+                    experienceElement.textContent = Math.round(currentNumber);
+                }
+                else experienceElement.textContent = Math.round(maxYearsExperience);
+                if(currentNumber<maxSkills){
+                    skillElement.textContent = Math.round(currentNumber);
+                }
+                else skillElement.textContent = Math.round(maxSkills);
+                if(currentNumber<maxProjects){
+                    ProjectsElement.textContent = Math.round(currentNumber);
+                }
+                else ProjectsElement.textContent = Math.round(maxProjects);
+
+                // Actualizamos el texto del h1
+                counterElement.textContent = Math.round(currentNumber);
+
+            }, 50);
+        }
+
+        // Iniciar la animación cuando la página haya cargado completamente
+        window.addEventListener('load', animateCounter);
+    </script>
+
+
 </body>
 </html>

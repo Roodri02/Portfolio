@@ -9,84 +9,65 @@
 <body>
 
 
-    <header class="header">
-        
-        <!-- El navegador principal de la página web-->
-        <div class="nav-container">
+    <div class="neon-green">
 
+    </div>
+
+    <header class="header seccion" id="Home" data-color="#33ffb1" >
+        <!-- El navegador principal de la página web-->
+        <div class="nav-container" id="nav-container">
             <!-- El container principal del logo del navegador -->
             <div class="nav-logo-container">
+                <!-- Span para poder personalizar el "." -->
                 <span class="logo">Rodrigo</span><span class="logo-doc">.</span>
             </div>
-
             <!-- El container principal de los links del navegador-->
             <div class="nav-links-container">
-                
+                <!-- Lista que contiene los links del navegador-->
                 <ul class="links-list">
-
+                    <!-- Cada uno de los elementos de la lista de navegación-->
                     <li class="link-list-item">
-
-                        <a href="#" class="link-list-item-a active-link">
+                        <!-- Anchor que navega entre las diferentes secciones y en este caso es la que está activa-->
+                         <!-- El id es para poder activar el link cuando lleguemos a esa seccion o cuando cliquemos en ella -->
+                        <a href="#Home" class="link-list-item-a active-link" id="link-list-item-a">
                             Home
                         </a>
-
-                    </li>
-
-                    
+                    </li>                   
                     <li class="link-list-item">
-
-                        <a href="#section2" class="link-list-item-a">
+                        <!-- Anchor que nos llevará a la sección de servicios que ofrezco -->
+                        <a href="#Services" class="link-list-item-a services-link" id="link-list-item-a">
                             Services
                         </a>
-
-                    </li>
-
-                    
+                    </li>                    
                     <li class="link-list-item">
-
-                        <a href="#section3" class="link-list-item-a">
+                        <!-- Anchor que nos llevará a la sección de resumen -->
+                        <a href="#Resume" class="link-list-item-a" id="link-list-item-a">
                             Resume
                         </a>
-
-                    </li>
-
-                    
+                    </li>                  
                     <li class="link-list-item">
-
-                        <a href="#section1" class="link-list-item-a">
+                        <!-- Anchor que nos llevará a la sección de trabajos -->
+                        <a href="#section1" class="link-list-item-a" id="link-list-item-a">
                             Work    
                         </a>
-
-                    </li>
-
-                    
+                    </li>            
                     <li class="link-list-item">
-
-                        <a href="#section2" class="link-list-item-a">
+                        <!-- Anchor que nos llevará a la sección de contacto -->
+                        <a href="#section2" class="link-list-item-a" id="link-list-item-a">
                             Contact
                         </a>
-
                     </li>
-
-
                 </ul>
-
-                <div class="hire-me-container">
-                    
-                    <a href="#section3" class="hire-me-button">
+                <!-- Este contenedor contiene el botón de "Contrátame", que nos llevará a un formulario -->
+                <div class="hire-me-container">    
+                    <!-- Anchor que nos llevará a la sección para contratarme -->
+                    <a href="#section3" class="hire-me-button" >
                         Hire me
                     </a>
-
-
                 </div>
-
-
             </div>
-
             <!-- El container principal del boton de contacto-->
             <div class="nav-button-container">
-
-
 
 
             </div>
@@ -94,94 +75,96 @@
 
         </div>
 
+        <!-- Segundo Contenedor del header, este contendrá la imágen y el pequeño resumen sobre mí -->
         <div class="header-container">
+            <!-- Este contenedor nos va a almacenar tanto el título como la imágen-->
             <div class="header-info-container">
+                <!-- Este contenedor nos va a almacenar la información del título principal-->
                 <div class="info-container"> 
-
-                    <!-- Ahora aqui necesito 4 containers verticales-->
-    
+                    <!-- Este container tiene el resumen de mi profesión en pequeñito-->
                     <div class="software-container">
                         Software Developer
                     </div>
-    
+                    <!-- Este container tiene el título principal-->
                     <div class="name-container">
+                        <!-- El título principal-->
                         <h1 class="name-init-container">
                             Hello I'm
                         </h1>
-    
+                        <!-- El título de mi nombre-->
                         <h1 class="name-title-container">
                             Rodrigo Cabello
                         </h1>
                     </div>
-    
+                    <!-- Este container tiene el resumen debajo del título-->
                     <div class="resume-container">
                         <p> I excel at crafting elegant digital experiences and 
                             I am proficient in various programming languages and
                             technologies.
                         </p>
                     </div>
-    
+                    <!-- Este container va a contener anchors, la descarga del CV y los links a las redes sociales -->
                     <div class="header-links">
-    
+                        <!-- Este div contiene el botón de curriculum -->
                         <div class="curriculum-container">
-    
+                            <!-- Este anchor contiene el link donde se descargará el curriculum -->
                             <a href="" class="curriculum-link-container">
+                                <!-- Contiene el nombre del botón -->
                                 <div class="currilum-download-container-button">
                                     DOWNLOAD CV
                                 </div>
-        
+                                <!-- Contiene el logo de descarga del botón -->
                                 <div class="currilum-download-container-logo">
                                     <img src="./ASSETS/IMAGES/download-icon.png" alt="">
                                 </div>
                             </a>
-    
-    
                         </div>
-    
+                        <!-- Este div ira a la derecha del botón de desacarga y se encarga de colocar en columnas las redes sociales -->
                         <div class="social-media-container">
-    
+                            <!-- Anchor que contiene una imágen para las redes sociales -->
                             <a href="" class="social-link-container">
                                 <img src="./ASSETS/IMAGES/instagram-icon.png" alt="">
                             </a>
+                            <!-- Anchor que contiene una imágen para las redes sociales -->
                             <a href="" class="social-link-container">
                                 <img src="./ASSETS/IMAGES/github-icon.png" alt="">
                             </a>
+                            <!-- Anchor que contiene una imágen para las redes sociales -->
                             <a href="" class="social-link-container">
                                 <img src="./ASSETS/IMAGES/linkedin-icon.png" alt="">
                             </a>
+                            <!-- Anchor que contiene una imágen para las redes sociales -->
                             <a href="" class="social-link-container">
                                 <img src="./ASSETS/IMAGES/youtube-icon.png" alt="">
                             </a>
                         </div>
-    
                     </div>
-    
                 </div>
-    
+                <!-- Este contenedor tiene la imágen principal para el header -->
                 <div class="img-container"> 
-    
+                    <!-- Este div lo utilizo para hacer el efecto de radar debajo de la imagen -->
                     <div class="tarjeta">
                         <img src="./ASSETS/IMAGES/fotoMia.jpeg" alt="">
                     </div>
-                    
                 </div>
             </div>
-
+            <!-- Este contenedor nos va a almacenar la información extra que hay debajo del titulo y de la imagen-->
             <div class="programmer-info-container">
 
+                <!-- Cada uno de estos div va a contener título e información sobre los extras -->
+                <!-- Este div contiene información sobre los años de experiencia -->
                 <div class="programmer-info-item-container">
-
+                    <!-- Este div contiene el título sobre los años de experiencia -->
                     <div class="programmer-info-title-container">
+                        <!-- Título h2 para los años de experiencia -->
                         <h2 class="programmer-title" id="experience-title">
                             12
                         </h2>
                     </div>
-
+                    <!-- Div que contiene la información sobre el título, en este caso, explica que son los años de experiencia -->
                     <div class="programmer-info-title-container">
                         <p>Years of experience</p>
                     </div>
-
-
                 </div>
                 <div class="programmer-info-item-container">
                     <div class="programmer-info-title-container">
@@ -219,75 +202,315 @@
 
 
             </div>
-
             <div class="info-divisor">
                 <!-- Este solo sirve para dividir la informacion-->
             </div>
         </div>
-
-
-
-
     </header>
 
 
 
 
+    <!-- AQUÍ VOY A PONER UN SEPARADOR ENTRE SECCIONES DEL PORTFOLIO, PARA QUE LA INFORMACIÓN ESTÉ SEPARADA  -->
+    <div class="section-divisor">
+        <!-- En CSS meteré una altura para separar ambas secciones -->
+    </div>
 
 
 
 
 
+    <div class="services-container seccion" id="Services"  data-color="#e4ff48">
+
+
+        <div class="neon-yellow">
+
+        </div>
+
+        <div class="services-container-title">
+
+            <div class="services-divisor">
+
+            </div>
+
+            <div class="services-title">
+                <h1 class="services-title-h1">
+                    Services
+                </h1>
+            </div>
+
+            <div class="services-divisor-2">
+
+            </div>
+
+        </div>
+
+        
+        <div class="services-container-sections">
+
+
+            <div class="services-divisor-1">
+
+            </div>
+
+            <div class="services-sections-container">
+
+
+                <div class="services-section-row">
+                    <section class="services-section">
+
+                        <div class="section-title-info-container">
+                            <div class="section-number">
+                                <h1>01</h1>
+                            </div>
+                            <div class="section-arrow">
+                                <img src="./ASSETS/IMAGES/arrow.png" alt="">
+                            </div>
+                        </div>
+
+
+                        <div class="section-title">
+
+                            <h1>
+                                Web Development
+                            </h1>
+                            <p>
+                                asdasdasdassdasd ddddddddddddddddddddddddddddddddddddddddddddddd
+                            </p>
+                        </div>
+
+                    </section>
+                    <section class="services-section">
+        
+                        <div class="section-title-info-container">
+                            <div class="section-number">
+                                <h1>02</h1>
+                            </div>
+                            <div class="section-arrow">
+                                <img src="./ASSETS/IMAGES/arrow.png" alt="">
+                            </div>
+                        </div>
+
+
+                        <div class="section-title">
+
+                            <h1>
+                                Unreal Engine
+                            </h1>
+                            <p>
+                                asdasdasdassdasd ddddddddddddddddddddddddddddddddddddddddddddddd
+                            </p>
+                        </div>
+                    </section>
+                </div>
+                
+                <div class="services-section-row">
+                    <section class="services-section">
+
+                        <div class="section-title-info-container">
+                            <div class="section-number">
+                                <h1>03</h1>
+                            </div>
+                            <div class="section-arrow">
+                                <img src="./ASSETS/IMAGES/arrow.png" alt="">
+                            </div>
+                        </div>
+
+
+                        <div class="section-title">
+
+                            <h1>
+                                Unity Engine
+                            </h1>
+                            <p>
+                                asdasdasdassdasd ddddddddddddddddddddddddddddddddddddddddddddddd
+                            </p>
+                        </div>
+
+                    </section>
+                    <section class="services-section">
+                        
+                        <div class="section-title-info-container">
+                            <div class="section-number">
+                                <h1>04</h1>
+                            </div>
+                            <div class="section-arrow">
+                                <img src="./ASSETS/IMAGES/arrow.png" alt="">
+                            </div>
+                        </div>
+
+
+                        <div class="section-title">
+
+                            <h1>
+                                Game Design
+                            </h1>
+                            <p>
+                                asdasdasdassdasd ddddddddddddddddddddddddddddddddddddddddddddddd
+                            </p>
+                        </div>
+        
+                    </section>
+                </div>
+
+
+            </div>
+            <div class="services-divisor-2">
+
+            </div>           
+        </div>
+    </div>
+
+
+
+    <!-- AQUÍ VOY A PONER UN SEPARADOR ENTRE SECCIONES DEL PORTFOLIO, PARA QUE LA INFORMACIÓN ESTÉ SEPARADA  -->
+    <div class="section-divisor">
+        <!-- En CSS meteré una altura para separar ambas secciones -->
+    </div>
 
 
 
 
+    <div class="services-container seccion" id="Resume"  data-color="#ff3131">
+        <div class="neon-yellow">
+
+        </div>
+
+        <div class="services-container-title">
+            <div class="services-divisor">
+
+            </div>
+            <div class="services-title">
+                <h1 class="services-title-h1">
+                    Services
+                </h1>
+            </div>
+            <div class="services-divisor-2">
+
+            </div>
+        </div>
+        <div class="services-container-sections">
+            <div class="services-divisor-1">
+
+            </div>
+            <div class="services-sections-container">
+                <div class="services-section-row">
+                    <section class="services-section">
+
+                        <div class="section-title-info-container">
+                            <div class="section-number">
+                                <h1>01</h1>
+                            </div>
+                            <div class="section-arrow">
+                                <img src="./ASSETS/IMAGES/arrow.png" alt="">
+                            </div>
+                        </div>
+                        <div class="section-title">
+                            <h1>
+                                Web Development
+                            </h1>
+                            <p>
+                                asdasdasdassdasd ddddddddddddddddddddddddddddddddddddddddddddddd
+                            </p>
+                        </div>
+                    </section>
+                    <section class="services-section">
+        
+                        <div class="section-title-info-container">
+                            <div class="section-number">
+                                <h1>02</h1>
+                            </div>
+                            <div class="section-arrow">
+                                <img src="./ASSETS/IMAGES/arrow.png" alt="">
+                            </div>
+                        </div>
+
+
+                        <div class="section-title">
+
+                            <h1>
+                                Unreal Engine
+                            </h1>
+                            <p>
+                                asdasdasdassdasd ddddddddddddddddddddddddddddddddddddddddddddddd
+                            </p>
+                        </div>
+                    </section>
+                </div>
+                <div class="services-section-row">
+                    <section class="services-section">
+
+                        <div class="section-title-info-container">
+                            <div class="section-number">
+                                <h1>03</h1>
+                            </div>
+                            <div class="section-arrow">
+                                <img src="./ASSETS/IMAGES/arrow.png" alt="">
+                            </div>
+                        </div>
+
+
+                        <div class="section-title">
+
+                            <h1>
+                                Unity Engine
+                            </h1>
+                            <p>
+                                asdasdasdassdasd ddddddddddddddddddddddddddddddddddddddddddddddd
+                            </p>
+                        </div>
+                    </section>
+                    <section class="services-section">
+                        <div class="section-title-info-container">
+                            <div class="section-number">
+                                <h1>04</h1>
+                            </div>
+                            <div class="section-arrow">
+                                <img src="./ASSETS/IMAGES/arrow.png" alt="">
+                            </div>
+                        </div>
+                        <div class="section-title">
+                            <h1>
+                                Game Design
+                            </h1>
+                            <p>
+                                asdasdasdassdasd ddddddddddddddddddddddddddddddddddddddddddddddd
+                            </p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="services-divisor-2">
+
+            </div>
+        </div>
+    </div>
 
 
 
-
-
-
-
+    <!-- Script que me cambia el active link al hacer click -->
     <script>
-        // Obtener todos los elementos del menú
-        const navItems = document.querySelectorAll('.link-list-item-a');
-
-        // Función para quitar la clase 'active' de todos los elementos del menú
+        // Seleccionar los elementos del menú y las secciones
+        const navItems = document.querySelectorAll('.link-list-item-a');    
+    
+        // Función para quitar la clase 'active-link' de todos los enlaces
         function removeActiveClass() {
             navItems.forEach(item => item.classList.remove('active-link'));
         }
-
+    
+    
         // Detectar clics en los enlaces para cambiar el estado activo
         navItems.forEach(item => {
-            item.addEventListener('click', (e) => {
-                removeActiveClass(); // Elimina 'active' de todos los enlaces
-                item.classList.add('active-link'); // Marca como 'active' el enlace clicado
-
+            item.addEventListener('click', () => {
+                removeActiveClass(); // Eliminar la clase de todos los enlaces
+                item.classList.add('active-link'); // Activar el enlace clicado
             });
         });
-
-        // (Opcional) Si quieres inicializar con un enlace activo basado en la URL actual
-        window.addEventListener('load', () => {
-            const initialSection = window.location.hash.replace('#', '');
-            if (initialSection) {
-                const initialLink = document.querySelector(`a[href="#${initialSection}"]`);
-                if (initialLink) {
-                    removeActiveClass();
-                    initialLink.classList.add('active-link');
-                }
-            }
-        });
+    
     </script>
 
 
-
-
-
-
-
     <!-- Script que anima el contador de commits-->
-
     <script>
         // Definir el valor máximo de la animación
         const maxNumber = 286;
@@ -337,6 +560,112 @@
         // Iniciar la animación cuando la página haya cargado completamente
         window.addEventListener('load', animateCounter);
     </script>
+
+
+    <!-- Scrip para modificar el nav al hacer scroll-->
+    <script>
+
+        window.addEventListener('scroll', function() {
+            const etiqueta = document.getElementById('nav-container');
+            const scrollPosicion = window.scrollY; // Posición actual del scroll
+        
+            if (scrollPosicion > 0) { // Cambia 100 por el valor deseado
+                etiqueta.classList.remove('nav-container'); // Quita la clase original
+                etiqueta.classList.add('nav-container-moving'); // Añade la clase nueva
+            } else {
+                etiqueta.classList.remove('nav-container-moving'); // Quita la clase nueva
+                etiqueta.classList.add('nav-container'); // Vuelve a la clase original
+            }
+        });
+        
+    </script>
+
+
+    <!-- Script que me controla el cambio en el navegador, tanto al hacer click como al cambiar de seccion haciendo scroll-->
+    <script>
+        const sections = document.querySelectorAll('.seccion'); // Secciones con IDs correspondientes
+        let isScrollingManually = false; // Bandera para controlar el scroll manual
+
+        // Función para quitar la clase 'active-link' de todos los enlaces
+        function removeActiveClass() {
+            navItems.forEach(item => item.classList.remove('active-link'));
+        }
+
+        // Función para cambiar el color de la variable CSS principal
+        function changeMainColor(color) {
+            document.documentElement.style.setProperty('--main-color', color);
+        }
+
+        // Crear el IntersectionObserver
+        const observer = new IntersectionObserver(
+            (entries) => {
+                if (isScrollingManually) return; // Evitar cambios si estamos navegando manualmente
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const sectionId = entry.target.id; // Obtener el ID de la sección visible
+                        const activeLink = document.querySelector(`a[href="#${sectionId}"]`); // Buscar el enlace correspondiente
+
+                        // Cambiar la variable de color principal
+                        const color = entry.target.getAttribute('data-color');
+                        if (color) {
+                            changeMainColor(color);
+                        }
+
+                        // Si el enlace existe, actualizar 'active-link'
+                        if (activeLink) {
+                            removeActiveClass();
+                            activeLink.classList.add('active-link');
+                        }
+                    }
+                });
+            },
+            {
+                root: null, // Usar el viewport completo
+                threshold: 0.65, // Detectar cuando el 65% de la sección sea visible
+            }
+        );
+
+        // Observar cada sección
+        sections.forEach((section) => observer.observe(section));
+
+        // Detectar clics en los enlaces para manejar la navegación
+        navItems.forEach((item) => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault(); // Prevenir el comportamiento predeterminado
+                const targetId = item.getAttribute('href').replace('#', ''); // Obtener el ID del destino
+                const targetSection = document.getElementById(targetId);
+
+                if (targetSection) {
+                    // Activar el estado de navegación manual
+                    isScrollingManually = true;
+
+                    // Cambiar el color inmediatamente
+                    const color = targetSection.getAttribute('data-color');
+                    if (color) {
+                        changeMainColor(color);
+                    }
+
+                    // Cambiar el enlace activo
+                    removeActiveClass();
+                    item.classList.add('active-link');
+
+                    // Hacer scroll hacia la sección objetivo
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth', // Desplazamiento suave
+                        block: 'start', // Ajustar la vista al inicio de la sección
+                    });
+
+                    // Desactivar el estado de navegación manual después del desplazamiento
+                    setTimeout(() => {
+                        isScrollingManually = false;
+                    }, 800); // Ajusta este tiempo según la duración del desplazamiento
+                }
+            });
+        });
+
+    </script>
+
+
 
 
 </body>

@@ -3,14 +3,26 @@
 @import url('https://fonts.cdnfonts.com/css/cascadia-code');
 
 
+
+
 /* <------------ VARIABLES CSS ------------> */
 :root{
 
     /*Background colors*/
-    --background-color : #1c1c22;
-    --background-color2 : rgb(56, 56, 56);
-    --background-color3 : #33ffb1;
-    --background-color4 : rgb(107, 107, 107);
+    --background-color : rgb(12, 12, 15);
+    --background-color2 : rgb(22, 21, 21);
+    --background-color3 : #e4ff48;
+    --background-color4 : rgb(20, 19, 19);
+
+    /*Colores de neon */
+    --neon-green : #33ffb1;
+    --neon-red : #ff3131;
+    --neon-yellow : #e4ff48;
+    --neon-blue : #55ddff;
+
+    /*Color principal*/
+    --main-color : #33ffb1;
+    --services-section-color :#e4ff48 ;
 
     /*Fonts*/
     --cascadia-font : 'Cascadia Code', sans-serif;
@@ -28,21 +40,27 @@
     --link-color3 : rgb(224, 224, 224);
     --link-color4 : rgb(224, 224, 224);
 
+
 }
 
 
-/* <------------- ALL CSS --------------> */
-*{
 
+
+/* <------------- ALL CSS --------------> */
+/* *CSS */
+*{
     /* Le damos un margen de 0 a toda la página web
      para que no haya bordes blancos en ningun borde*/
     margin: 0;
-
+    scroll-behavior: smooth !important;
+    scroll-padding-top: 10vh; /* Ajusta según la altura de tu header */
 
     /* Voy a cambiar la fuente en todo el documento*/
     font-family: var(--cascadia-font);
     
 }
+
+
 
 /* <------------- CLASES CSS -----------> */
 
@@ -52,15 +70,92 @@
 
     display: flex;
     flex-direction: column; /* Apilar elementos de forma vertical */
-
     /*Le vamos a dar un tamaño del 100% de la ventana*/
     width: 100vw;
     height: 100vh;
-
-
     /* Cambiamo el color de fondo de todo el header */
     background-color: var(--background-color);
 }
+
+
+/* <----------- CLASES PARA LOS NEONES REPARTIDOS POR LA PAGINA ----------> */
+.neon-green{
+
+    /*Creamos el recipiente con la posicion absoluta de donde vamos a colocar el neon*/
+    border-radius: 50%;
+    opacity: 0.1;
+
+    /*Posicion*/
+    position: absolute;
+    top: 300px;
+    left: 10vw;
+    width: 40vw;
+    height: 200px;
+
+    /*Indice z*/
+    z-index: 90;
+
+
+    /* Creamos una sombra para el fondo y simular unas luces de neon*/
+    box-shadow: 
+    0 0 30px var(--neon-green),
+    0 0 50px var(--neon-green),
+    0 0 80px var(--neon-green),
+    0 0 100px var(--neon-green),
+    0 0 200px var(--neon-green),
+    0 0 300px var(--neon-green),
+    0 0 400px var(--neon-green),
+    0 0 500px var(--neon-green),
+    0 0 600px var(--neon-green),
+    0 0 7000px var(--neon-green),
+    0 0 55000px var(--neon-green),
+    0 0 355000px var(--neon-green);
+
+
+    /*Color de fond*/
+    background-color: var(--neon-green);
+
+
+}
+.neon-yellow{
+
+    /*Creamos el recipiente con la posicion absoluta de donde vamos a colocar el neon*/
+    border-radius: 50%;
+    opacity: 0.03;
+
+    /*Posicion*/
+    position: absolute;
+    top: 1550px;
+    left: 13vw;
+    width: 70vw;
+    height: 300px;
+
+    /*Indice z*/
+    z-index: 90;
+
+
+    /* Creamos una sombra para el fondo y simular unas luces de neon*/
+    box-shadow: 
+    0 0 30px var(--neon-yellow),
+    0 0 50px var(--neon-yellow),
+    0 0 80px var(--neon-yellow),
+    0 0 100px var(--neon-yellow),
+    0 0 200px var(--neon-yellow),
+    0 0 300px var(--neon-yellow),
+    0 0 400px var(--neon-yellow),
+    0 0 500px var(--neon-yellow),
+    0 0 600px var(--neon-yellow),
+    0 0 7000px var(--neon-yellow);
+
+
+    /*Color de fond*/
+    background-color: var(--neon-yellow);
+
+
+}
+
+
+
 
 /* NAV DEL HEADER*/
 .nav-container{
@@ -68,6 +163,27 @@
     /* Le voy a dar una distribución horizontal, para tener separados 
     cada container del navegador */
     display: flex;
+    position: fixed;
+
+    /*Le vamos a dar una anchura del 100% de la ventana*/
+    width: 100vw;
+    /*Le vamos a dar una altura del 10% de la ventana*/
+    height: 10vh;
+
+    /* Fijo en la parte superior de la ventana */
+    top: 0; 
+    left: 0;
+    z-index: 100; /* Aseguramos que esté encima de otros elementos */
+    transition: 0.2s;
+
+}
+
+.nav-container-moving{
+    /* Le voy a dar una distribución horizontal, para tener separados 
+    cada container del navegador */
+    transition: 0.4s;
+    display: flex;
+    position: fixed;
 
 
     /*Le vamos a dar una anchura del 100% de la ventana*/
@@ -75,41 +191,45 @@
     /*Le vamos a dar una altura del 10% de la ventana*/
     height: 10vh;
 
-
-
     top: 0; /* Fijo en la parte superior de la ventana */
     left: 0;
     z-index: 100; /* Aseguramos que esté encima de otros elementos */
-
+    background-color: rgba(12,12,15,0.9 );
+    padding-bottom: 10px;
+    position: fixed;
 }
+
+
+
+
+
+
+
+
+
 
 /*NAV-LOGO-CONTAINER*/
 .nav-logo-container{
     width: 70vw;
     height: 100%;
-
     /*Centramos el texto del logo*/
     display: flex;
     justify-content: center; /* Centra horizontalmente */
     align-items: center;  
 
 }
-
 .logo, .logo-doc{
 
     font-size: 35px;
     font-weight: normal;
-
     text-align: center;
-
-
     /*Cambiamos el color del titulo del logo    */
     color: var(--title-color1);
 
 }
 
 .logo-doc{
-    color: var(--background-color3);
+    color: var(--main-color);
     font-weight: bold;
 }
 
@@ -173,7 +293,7 @@
 }
 
 .link-list-item-a:hover{
-    color: var(--background-color3);
+    color: var(--main-color);
     transform: scale(1.1);
 
 }
@@ -181,7 +301,10 @@
 
 .active-link{
 
-    color: var(--background-color3);
+    color: var(--main-color);
+    text-shadow: 
+    0 0 15px var(--main-color),
+    0 0 25px var(--main-color);
     border-bottom: 1px solid;
 }
 
@@ -214,7 +337,7 @@
     padding: 10px 25px;
     border-radius: 30px;
     color: rgb(41, 41, 41);
-    background-color: var(--background-color3);
+    background-color: var(--main-color);
 }
 
 .hire-me-container:hover{
@@ -230,7 +353,7 @@
 .header-container{
 
     width: 100vw;
-    height: 90vh; /* Resta el 10% del nav-container */
+    height: 100vh; /* Resta el 10% del nav-container */
 
 }
 
@@ -278,10 +401,10 @@
 }
 
 .name-title-container{
-    color: var(--background-color3);
+    color:  var(--neon-green);
     text-shadow: 
-       0 0 30px #33ffb1 ,
-        0 0 50px #33ffb1 ;
+       0 0 30px var(--neon-green),
+        0 0 50px var(--neon-green);
 }
 
 
@@ -306,7 +429,7 @@
 
     width: 200px;
     border: 1px solid;
-    border-color: var(--background-color3);
+    border-color: var(--neon-green);
     padding: 5px;
     margin-top: 10px;
     border-radius: 200px;
@@ -332,18 +455,18 @@
 
     gap: 10px;
 
-    color: var(--background-color3);
+    color: var(--neon-green);
 }
 
 .curriculum-container:hover{
 
     transform: scale(1.05);
     box-shadow: 0 0 10px,
-    0 0 40px #33ffb1 ;
+    0 0 40px var(--neon-green);
     text-shadow: 0 0 10px,
-      0 0 40px #33ffb1 ,
-       0 0 50px #33ffb1 ,
-        0 0 60px #33ffb1 ;
+      0 0 40px var(--neon-green),
+       0 0 50px var(--neon-green) ,
+        0 0 60px var(--neon-green) ;
 
 }
 
@@ -377,7 +500,7 @@
     position: absolute;
     height: 500px;
     width: 500px;
-    background-image: conic-gradient(#33ffb1 20deg, transparent 120deg);
+    background-image: conic-gradient(var(--neon-green) 20deg, transparent 120deg);
 
     animation : rotar 5s linear infinite;
 }
@@ -413,9 +536,9 @@
     background-position: 90%;
 
     box-shadow: 
-    0,0,20px  #33ffb1,
-    0,0,50px  #33ffb1,
-    0,0,70px  #33ffb1;
+    0,0,20px  var(--neon-green),
+    0,0,50px  var(--neon-green),
+    0,0,70px  var(--neon-green);
     
 }
 
@@ -443,7 +566,7 @@
 
 
     border: 1px solid;
-    border-color: var(--background-color3);
+    border-color: var(--neon-green);
     padding:10px  10px;
     border-radius: 50%;
     width: 24px;
@@ -455,11 +578,11 @@
 .social-link-container:hover{
     transform: scale(1.05);
     box-shadow: 0 0 10px,
-    0 0 40px #33ffb1 ;
+    0 0 40px var(--neon-green);
     text-shadow: 0 0 10px,
-      0 0 30px #33ffb1 ,
-       0 0 40px #33ffb1 ,
-        0 0 50px #33ffb1 ;
+      0 0 30px var(--neon-green) ,
+       0 0 40px var(--neon-green),
+        0 0 50px var(--neon-green);
 }
 
 .social-link-container img{
@@ -472,10 +595,10 @@
 
     display: flex;
 
-    width: 100vw;
+    width: 83vw;
     height: 20%;
+    margin : 0 0 0 17vw;
 
-    margin : 0 0 0 350px;
 
     justify-content: left;
     gap :50px;
@@ -486,6 +609,7 @@
 
     width: 15%;
     height: 100%;
+
 
     display: flex;
     align-items: center;
@@ -520,6 +644,170 @@
 }
 
 
+
+/* <---------------- SERVICES CSS ---------------->  */
+
+.services-container{
+
+    width: 100vw;
+    height: 90vh;
+    background: linear-gradient(var(--background-color), var(--background-color),var(--background-color),var(--background-color));
+
+
+}
+
+.services-container-title{
+
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    align-content: center;
+
+    justify-content: center;
+
+    display: flex;
+
+
+}
+
+.services-divisor{
+
+    width: 15%;
+    height: 100%;
+
+}
+
+.services-divisor-1,.services-divisor-2{
+
+    width: 18.5%;
+    height: 100%;
+
+}
+
+.services-title{
+
+    width: 60%;
+    height: 100%;
+    text-align: left;
+    align-content: center;
+    justify-content: center;
+}
+
+.services-title-h1{
+
+    font-size: 50px;
+    color:rgb(255, 255, 255);
+}
+
+.services-container-sections{
+
+    display: flex;
+    height: 80%;
+    width: 100%;
+}
+.services-sections-container{
+    width: 64%;
+    height: 100%;
+
+    justify-content: center;
+
+}
+
+.services-section-row{
+    display: flex;
+    width: 90%;
+    height: 50%;
+    justify-content: left;
+    gap: 5%;
+    
+
+}
+
+.services-section{
+
+    width: 48%;
+    height: 90%;
+    z-index: 95;
+
+}
+
+.section-title-info-container{
+    display: flex;
+    width: 100%;
+    height: 20%;
+
+
+}
+.section-number{
+    width: 50%;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    align-content: center;
+    text-align: left;
+    font-size: 50px;
+}
+.section-arrow{
+    width: 50%;
+    height: 100%;
+    align-content: center;
+    text-align: right;
+    margin-right: 20px;
+
+}
+
+.section-arrow img{
+    border: 1px solid;
+    border-color: var(--services-section-color);
+    background-color: #e4ff48;
+    rotate: 45deg;
+    transition: 0.3s;
+
+    padding: 15px;
+    border-radius: 50px;
+
+
+}
+
+.section-arrow img:hover{
+
+    transform: rotate(-45deg) scale(1.1);
+    box-shadow: 
+    0 0 20px var(--neon-yellow);
+}
+
+.section-title{
+    height: 80%;
+    width: 100%;
+}
+
+.section-title h1{
+    color: var(--services-section-color);
+    font-size: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-shadow: 
+    0 0 20px var(--services-section-color);
+    
+}
+.section-title p{
+    color: white;
+    padding-bottom: 40px;
+    border-bottom: 1px solid;
+    border-color: rgb(255, 254, 175);
+}
+
+
+
+/* <---------------- SECCION DIVISOR CSS ---------------> */
+
+.section-divisor{
+
+    width: 100vw;
+    height: 30vh;
+    background-color: var(--background-color);
+
+}
+
 /* <---------------- ETIQUETAS CSS ---------------->  */
 
 
@@ -534,5 +822,3 @@ ul{
     list-style: none;
 
 }
-
-
